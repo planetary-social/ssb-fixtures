@@ -5,6 +5,5 @@
 .vscode
 node_modules
 /data
-/lib
 /gitignored
 pnpm-lock.yaml

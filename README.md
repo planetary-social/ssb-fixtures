@@ -66,3 +66,20 @@ This **does not follow SemVer**. That's because we want to version the datasets 
 - Generate channel messages
 - Private threads (currently all private messages are "root")
 
+---------------------------------
+
+## this planetary fork
+In order to use ssb-db2 on the m1 mac, I must replace use of
+`ssb-validate2-rsjs-node` with `ssb-validate2`. Since this module uses an
+existing, published version of db2, we must switch to using our own fork of db2 that does not use the `validate2-rsjs-node` library.
+
+So that's what this is. A version of `ssb-fixtures` that depends on the
+forked `ssb-db2`.
+
+The package version numbers got a little crazy because I was trying to figure out why `npm` was not using the appropriate forked gh repo in package.json.
+
+The good news is that the [db2](https://github.com/planetary-social/ssb-db2) tests now pass.
+
+(There is a circular dependency graph between `ssb-fixtures` and `db2`)
+
+
